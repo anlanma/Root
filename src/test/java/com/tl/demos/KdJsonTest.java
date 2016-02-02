@@ -1,7 +1,6 @@
 package com.tl.demos;
 
 import com.kuaidadi.framework.util.JsonUtil;
-import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -12,7 +11,6 @@ import java.util.Map;
  * Created by tanglin on 2016/1/5.
  */
 public class KdJsonTest {
-    @Test
     public void testJson(){
         Map<String,Object> agentInfo = new HashMap<String, Object>();
 

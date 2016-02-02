@@ -13,6 +13,7 @@ public class PropertiesTest {
     public static void main(String[] args) {
         InputStream in = null;
         try {
+            //绝对路径
 //            in = new BufferedInputStream(new FileInputStream("E:\\GitHub\\Root\\src\\main\\resources\\conf.properties"));
             in = PropertiesTest.class.getClassLoader().getResourceAsStream("conf.properties");
             Properties p = new Properties();

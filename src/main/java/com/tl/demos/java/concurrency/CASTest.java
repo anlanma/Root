@@ -8,7 +8,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 public class CASTest {
     private static AtomicBoolean running = new AtomicBoolean(true);
     public static void main(String[] args) {
-        //compareAndSetΪfalseʱִֻ��һ��
+        //compareAndSet为false时只执行一次
         while (running.compareAndSet(false,true)){
             System.out.println(running.get());
         }

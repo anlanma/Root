@@ -20,6 +20,7 @@ public class KafkaBrokerConnTest {
         Socket socket = null;
         Long befor = System.currentTimeMillis();
         try {
+            //建立连接
             socket = new Socket(host,port);
 
             logger.info("Connect "+host+":"+port+" successfully,time used:"+ (System.currentTimeMillis() - befor) + " ms");
