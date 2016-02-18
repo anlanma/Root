@@ -11,14 +11,14 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Consumer {
 
     public static void main(String[] args) throws Exception {
-//consumer.xml放在maven项目的resources目录下
+//consumer.xml????maven?????resources????
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("classpath*:consumer.xml");
         context.start();
 
-        ManagerRemoteService demoService = (ManagerRemoteService)context.getBean("demoService"); // 获取远程服务代理
+        ManagerRemoteService demoService = (ManagerRemoteService)context.getBean("demoService"); // ????????????
 //        RpcContext.getContext().setAttachment("attachment","something");
-        NodeConfig config = demoService.getClientConfig(61); // 执行远程方法
+        NodeConfig config = demoService.getClientConfig(61); // ?????????
 
-        System.out.println(JSON.toJSONString(config)); // 显示调用结果
+        System.out.println(JSON.toJSONString(config)); // ?????????
     }
 }
