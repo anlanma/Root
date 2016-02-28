@@ -1,5 +1,10 @@
 package com.tl.demos.java.string;
 
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+
 /**
  * Created by tanglin on 16/2/16.
  */
@@ -21,6 +26,23 @@ public class ToString {
     }
 
     public static void main(String[] args) {
-        System.out.println(new ToString().toString());
+//        System.out.println(new ToString().toString());
+//        System.out.println(set());
+//        System.out.println(map());
+
+
     }
+    public static Set<String> set(){
+        Set<String> sets = new HashSet<String>();
+        sets.add("a");
+        sets.add("b");
+        return sets;
+    }
+    public static Map<String,String> map(){
+        Map<String,String> map = new HashMap<String, String>();
+        map.put("1","one");
+        map.put("2","two");
+        return map;
+    }
+
 }
