@@ -145,5 +145,26 @@
       <artifactId>swan-api</artifactId>
       <version>1.0.0</version>
     </dependency>
+    <!--hadoop-->
+    <!--<dependency>-->
+      <!--<groupId>xerces</groupId>-->
+      <!--<artifactId>xercesImpl</artifactId>-->
+      <!--<version>2.11.0</version>-->
+    <!--</dependency>-->
+    <dependency>
+      <groupId>org.apache.hadoop</groupId>
+      <artifactId>hadoop-common</artifactId>
+      <version>2.5.2</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.hadoop</groupId>
+      <artifactId>hadoop-hdfs</artifactId>
+      <version>2.5.2</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.hadoop</groupId>
+      <artifactId>hadoop-client</artifactId>
+      <version>2.5.2</version>
+    </dependency>
   </dependencies>
 </project>
