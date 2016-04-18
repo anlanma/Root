@@ -134,7 +134,7 @@ public class HDFSUtil {
 
     @Test
     public void delete() {
-        String[] pathsToDelete = new String[]{};
+        String[] pathsToDelete = new String[]{"/swan"};
         try {
             for (String path : pathsToDelete) {
                 boolean result = fs.delete(new Path(path), true);
@@ -147,8 +147,8 @@ public class HDFSUtil {
 
     @Test
     public void rename() {
-        String srcPath = "/swan/wxxwxx";
-        String destPath = "/swan/wxx";
+        String srcPath = "/tl/newBinlog5";
+        String destPath = "/tl/recoverPath";
         try {
             boolean result = fs.rename(new Path(srcPath), new Path(destPath));
             Assert.assertEquals(true, result);

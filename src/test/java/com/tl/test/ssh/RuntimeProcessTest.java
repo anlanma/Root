@@ -18,7 +18,7 @@ public class RuntimeProcessTest {
         Process process = null;
         List<String> processList = new ArrayList<String>();
         try {
-            process = Runtime.getRuntime().exec("ls");
+            process = Runtime.getRuntime().exec("tail -f /app/agent-manager/logs/manager.log");
             BufferedReader input = new BufferedReader(new InputStreamReader(process.getInputStream()));
             String line = "";
             while ((line = input.readLine()) != null) {
