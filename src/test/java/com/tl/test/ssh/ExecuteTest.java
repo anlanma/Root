@@ -17,12 +17,10 @@ public class ExecuteTest {
 
     @Test
     public void testExecutor(){
-        CommandLine cmdLine = new CommandLine("tail");
-        cmdLine.addArgument("-f");
-        cmdLine.addArgument("${file}");
-        HashMap map = new HashMap();
-        map.put("file", new File("/app/agent-manager/logs/manager.log"));
-        cmdLine.setSubstitutionMap(map);
+//        String command = "sh /Users/tanglin/softwares/apache-tomcat-7.0.67/bin/startup.sh";
+        String command = "sh /Users/tanglin/softwares/apache-tomcat-7.0.67/bin/shutdown.sh";
+//        String command = "sh /Users/tanglin/Downloads/hdfs-checker-1.3/bin/startup.sh";
+        CommandLine cmdLine = CommandLine.parse(command);
 
         //使用ExecuteResultHandler进行异步处理
         DefaultExecuteResultHandler resultHandler = new DefaultExecuteResultHandler();
@@ -36,6 +34,7 @@ public class ExecuteTest {
             // some time later the result handler callback was invoked so we
             // can safely request the exit value
             resultHandler.waitFor();
+            System.out.println();
         } catch (IOException e) {
             e.printStackTrace();
         } catch (InterruptedException e) {
@@ -68,7 +67,7 @@ public class ExecuteTest {
             exec.setExitValues(null);
 
             //利用监视狗来设置超时
-            ExecuteWatchdog watchdog = new ExecuteWatchdog(20000);
+            ExecuteWatchdog watchdog = new ExecuteWatchdog(10000);
             exec.setWatchdog(watchdog);
 
             PumpStreamHandler streamHandler = new PumpStreamHandler(

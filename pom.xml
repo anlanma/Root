@@ -38,6 +38,7 @@
   </build>
 
   <dependencies>
+    <!--在本地执行shell命令-->
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-exec</artifactId>
